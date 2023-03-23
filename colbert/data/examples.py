@@ -26,7 +26,7 @@ class Examples:
 
         with open(path) as f:
             for line in f:
-                example = ujson.loads(line)[:nway]
+                example = ujson.loads(line.strip())[:nway]
                 examples.append(example)
 
         return examples
