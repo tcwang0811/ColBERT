@@ -47,7 +47,7 @@ def align(maxlen, student_out, teacher_out, teacher_queries):
                                          swap[1], swap[0]
                                      ]]
 
-def train(config: ColBERTConfig, triples, queries=None, collection=None, teacher_config=None, teacher_triples=None, teacher_queries=None, teacher_collection=None):
+def train_drdecr(config: ColBERTConfig, triples, queries=None, collection=None, teacher_config=None, teacher_triples=None, teacher_queries=None, teacher_collection=None):
     config.checkpoint = config.checkpoint or 'bert-base-uncased'
 
     if config.rank < 1:
