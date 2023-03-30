@@ -50,7 +50,7 @@ class DrDECRTrainer:
         self.teacher_queries = teacher_queries
         self.teacher_collection = teacher_collection
         if teacher_config is not None:
-            self.teacher_config = ColBERTConfig.from_existing(teacher_config, Run().teacher_config)
+            self.teacher_config = ColBERTConfig.from_existing(teacher_config, Run().config)
         else:
             self.teacher_config = teacher_config
 
